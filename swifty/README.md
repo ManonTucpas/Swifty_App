@@ -1,14 +1,52 @@
-# Welcome to your Expo app 👋
+# Welcome to your Swifty Companion 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-gluestack-app`](https://www.npmjs.com/package/create-gluestack).
+Swifty Companion is a mobile application designed specifically for students at 42. Built with Expo and leveraging the powerful Gluestack UI components, this app makes it easy to connect with 42 peers, track their progress and cursus.
 
 ## Get started
 
-1. Start the app
+1. Install dependencies
 
    ```bash
-    npm run start
+   npm install
    ```
+
+2. Create environment file
+
+   ```bash
+    touch .env
+   ```
+
+3. Start the app
+   1. Normal mode
+
+   ```bash
+    npx expo start
+   ```
+
+   2. Tunnel mode - mainly for 42 school
+
+   ```bash
+    npx expo start --tunnel
+   ```
+
+4. Change the `REDIRECT_URI` in
+
+- Swifty Companinon API applications in 42 intra settings
+- .env API repository
+
+## Network & Environment
+
+- If you’re using your device with Expo Go as a demo, make sure your phone is connected to the same Wi-Fi network as your computer. Check your computer’s IP address—that will be used as your API_URL.
+
+The .env should be:
+
+```env
+EXPO_PUBLIC_API_URL=http://[IPAddress]:3000
+```
+
+(Replace [IPAddress] with your computer’s actual IP address.)
+
+## Documentation
 
 In the output, you'll find options to open the app in a
 
@@ -16,21 +54,4 @@ In the output, you'll find options to open the app in a
 - [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
 - [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
 - [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-- [Nativewind](https://www.nativewind.dev/): Nativewind is a utility-first library for building native apps with Tailwind CSS.
-- [Gluestack](https://gluestack.io/): Gluestack is a component library for building native apps with Tailwind CSS.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [gluestack-ui on GitHub](https://github.com/gluestack/gluestack-ui): View our open source ui library and contribute.
-- [gluestack community](https://discord.com/channels/1050761204852858900/1336392784168484914): Chat with gluestack users and ask questions.
+- [Gluestack](https://gluestack.io/ui/docs/home/overview/quick-start)
